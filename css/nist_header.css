@@ -104,6 +104,12 @@
   padding-bottom: 54px;
 }
 
+@media (min-width: 1200px) {
+  .nist-header--standard .nist-header__nav-toggle-wrapper {
+    display: none;
+  }
+}
+
 @media (min-width: 560px) {
   .nist-header__nav-toggle-wrapper {
     padding-bottom: 0;
@@ -157,13 +163,18 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 }
 
 @media (min-width: 1200px) {
-  .nist-header__nav-inner {
+  .nist-header--bar .nist-header__nav-inner {
     width: 80%;
     position: absolute;
     right: 0;
     top: 58px;
     background: black;
   }
+
+  .nist-header--standard .nist-header__nav-inner {
+    display: block;
+  }
+
 }
 
 .nist-header__nav-inner a {
@@ -207,6 +218,13 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
   border-right: 0;
 }
 
+@media (min-width: 1200px) {
+  .nist-header--standard .nist-header__nav-inner li.nist-menu__item--depth-1 {
+    float: left;
+    clear: none;
+  }
+}
+
 .nist-header__nav-inner li.nist-menu__item--depth-1 > a {
   position: relative;
   display: block;
@@ -218,6 +236,10 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
   padding: 0.8rem 1rem;
   transition: color 300ms ease;
   border-bottom: 1px solid #333333;
+}
+
+.nist-header--standard .nist-header__nav-inner li.nist-menu__item--depth-1 > a {
+  border-bottom: none;
 }
 
 .nist-header__nav-inner li.nist-menu__item--depth-1:first-of-type {
@@ -237,6 +259,25 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 .nist-header__nav-inner .nist-menu__submenu {
   position: relative;
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .nist-header--standard .nist-header__nav-inner .nist-menu__submenu {
+    position: absolute;
+    left: -1000em;
+    display: block;
+  }
+
+  .nist-header--standard li.nist-menu__item--depth-1:hover .nist-menu__submenu {
+    left: 0;
+    display: block !important;
+    width: 100%;
+  }
+
+  .nist-header--standard li.nist-menu__item--depth-1:hover .nist-menu__submenu.has-one-column {
+    left: auto;
+    width: auto;
+  }
 }
 
 .nist-header__nav-inner .nist-menu__close {
@@ -377,6 +418,12 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  .nist-header--standard .expander {
+    display: none;
+  }
+}
+
 .nist-header__nav-inner .expander:hover {
   background: #333333;
 }
@@ -397,11 +444,50 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 /**
   * Search
   */
+
 .nist-header__search {
   position: absolute;
   z-index: 100;
-  right: 132px;
   margin-bottom: 0;
+  width: 100%;
+  background: #333333;
+  top: 54px;
+  left: 0;
+  right: auto;
+}
+
+.nist-header--standard .nist-header__search {
+  top: 160px;
+}
+
+@media (min-width: 560px) {
+  .nist-header__search {
+    float: right;
+    clear: none;
+    width: auto;
+    background: none;
+    top: 0;
+    left: auto;
+    right: 140px;
+  }
+
+  .nist-header--standard .nist-header__search {
+    float: none;
+    clear: none;
+    width: auto;
+    background: none;
+    top: 108px;
+    left: auto;
+    right: 140px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nist-header--standard .nist-header__search {
+    position: absolute;
+    top: 26px;
+    right: 10px;
+  }
 }
 
 .nist-header__search input[type=submit] {
@@ -438,16 +524,28 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 .nist-header__search input[type=text] {
   margin: 10px;
   padding-right: 36px;
-  color: white;
   background: none;
-  border: none;
   font-size: 17.6px;
   font-size: 1.1rem;
   line-height: 38px;
   height: 38px;
   width: 280px;
   text-align: left;
+}
+
+.nist-header__search input[type=text] {
   background: #333333;
+  border: none;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .nist-header--standard .nist-header__search input[type=text] {
+    background: #ffffff;
+    border: 1px solid;
+    border-color: #d9d9d9;
+    color: #000;
+  }
 }
 
 .nist-header__search input[type=text]:focus {
@@ -466,26 +564,15 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 .nist-header__search button[type=submit] {
   line-height: 58px;
   height: 58px;
+}
+
+.nist-header__search button[type=submit] {
   color: white;
 }
 
-.nist-header--bar .nist-header__search {
-  width: 100%;
-  background: #333333;
-  top: 54px;
-  left: 0;
-  right: auto;
-}
-
 @media (min-width: 560px) {
-  .nist-header--bar .nist-header__search {
-    float: right;
-    clear: none;
-    width: auto;
-    background: none;
-    top: 0;
-    left: auto;
-    right: 140px;
+  .nist-header--standard .nist-header__search button[type=submit] {
+    color: #000;
   }
 }
 
