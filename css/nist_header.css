@@ -8,6 +8,14 @@
   background: white;
   position: relative;
   z-index: 200;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.nist-header *,
+.nist-header *:before,
+.nist-header *:after {
+  box-sizing: inherit;
 }
 
 .nist-header__inner {
@@ -524,13 +532,15 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 .nist-header__search input[type=text] {
   margin: 10px;
   padding-right: 36px;
+  color: white;
   background: none;
+  border: none;
   font-size: 17.6px;
   font-size: 1.1rem;
-  line-height: 38px;
   height: 38px;
   width: 280px;
   text-align: left;
+  background: #333333;
 }
 
 .nist-header__search input[type=text] {
@@ -564,13 +574,14 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
 .nist-header__search button[type=submit] {
   line-height: 58px;
   height: 58px;
+  border: 0;
 }
 
 .nist-header__search button[type=submit] {
   color: white;
 }
 
-@media (min-width: 560px) {
+@media (min-width: 1200px) {
   .nist-header--standard .nist-header__search button[type=submit] {
     color: #000;
   }
@@ -585,4 +596,26 @@ a.nist-header__nav-toggle:hover, a.nist-header__nav-toggle:focus {
   padding-right: 1rem;
   padding-left: 16px;
   padding-left: 1rem;
+}
+
+/* Utility classes */
+.nist-header .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+.nist-header .element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Make sure body has no margin or padding when using only this header component */
+body {
+  padding: 0;
+  margin: 0;
 }
