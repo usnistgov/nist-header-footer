@@ -4,7 +4,6 @@
  *
  */
 
-
 function expandCollapse(expander) {
   expander.blur();
 
@@ -36,56 +35,52 @@ function closeMegamenu() {
 
 $(document).ready(function(){
 
-  $("body").prepend('<div id="nistheadergoeshere"></div>');
-  $("#nistheadergoeshere").load(
-    "https://pages.nist.gov/nist-header/bodyboilerplate.html",
-    function() {
-      expandCollapse($('li.is-active-trail > a .expander'));
+  expandCollapse($('li.is-active-trail > a .expander'));
 
-      $('.expander').click(function(e){
-        e.preventDefault();
-        expandCollapse($(this));
+  $('.expander').click(function(e){
+    e.preventDefault();
+    expandCollapse($(this));
+  });
+
+  $('.nist-header__nav-inner nist-menu__item--depth-1').focusin(function(){
+    $('.nist-header__nav-inner nist-menu__item--depth-1').removeClass('is-focused');
+    $(this).closest('nist-menu__item--depth-1').addClass('is-focused');
+  });
+
+  $('.nist-header__nav-inner nist-menu__item--depth-1').focusout(function(){
+    $('.nist-header__nav-inner nist-menu__item--depth-1').removeClass('is-focused');
+  });
+
+  //Mobile Menu Toggle on click
+  $('.nist-header__nav-toggle').click(function(){
+
+    if($('body').hasClass('has-mobile-menu')){
+      $('.nist-header__nav-inner').slideUp(300,function(){
+        $('body').removeClass('has-mobile-menu');
       });
-
-      $('.nist-header__nav-inner nist-menu__item--depth-1').focusin(function(){
-        $('.nist-header__nav-inner nist-menu__item--depth-1').removeClass('is-focused');
-        $(this).closest('nist-menu__item--depth-1').addClass('is-focused');
-      });
-
-      $('.nist-header__nav-inner nist-menu__item--depth-1').focusout(function(){
-        $('.nist-header__nav-inner nist-menu__item--depth-1').removeClass('is-focused');
-      });
-
-      //Mobile Menu Toggle on click
-      $('.nist-header__nav-toggle').click(function(){
-
-        if($('body').hasClass('has-mobile-menu')){
-          $('.nist-header__nav-inner').slideUp(300,function(){
-            $('body').removeClass('has-mobile-menu');
-          });
-        }else{
-          $('body').addClass('has-mobile-menu');
-          $('.nist-header__nav-inner').slideDown(300);
-        }
-
-      });
-
-      //Mobile Menu Toggle on focus
-      $('.nist-header__nav-toggle').focus(function(){
-        $('body').addClass('focus-mobile-menu');
-        $('.nist-header__nav-inner').slideDown(300);
-      });
-
-      // Mobile Menu Toggle on focus
-      $('#main').focusin(function(){
-        $('.focus-mobile-menu .nist-header__nav-inner').slideUp(300,function(){
-          $('body').removeClass('focus-mobile-menu');
-          $('body').removeClass('has-mobile-menu');
-          closeMegamenu();
-        });
-      });
+    }else{
+      $('body').addClass('has-mobile-menu');
+      $('.nist-header__nav-inner').slideDown(300);
     }
-  );
+
+  });
+
+  //Mobile Menu Toggle on focus
+  $('.nist-header__nav-toggle').focus(function(){
+    $('body').addClass('focus-mobile-menu');
+    $('.nist-header__nav-inner').slideDown(300);
+  });
+
+  // Mobile Menu Toggle on focus
+  $('#main').focusin(function(){
+
+    $('.focus-mobile-menu .nist-header__nav-inner').slideUp(300,function(){
+      $('body').removeClass('focus-mobile-menu');
+      $('body').removeClass('has-mobile-menu');
+      closeMegamenu();
+    });
+
+  });
 
 });
 
