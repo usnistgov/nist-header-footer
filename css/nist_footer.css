@@ -1,0 +1,372 @@
+/**
+ * @file
+ * Footer styles
+ *
+ */
+
+.nist-footer {
+    background: #333333;
+    position: relative;
+    z-index: 200;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+@media screen {
+    nist-footer {
+        display: block;
+    }
+    .nist-footer__inner,
+    .region-bottom,
+    .content-area-container,
+    {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+        padding-right: 16px;
+        padding-right: 1rem;
+        padding-left: 16px;
+        padding-left: 1rem;
+    }
+    .nist-footer__inner:after,
+    .region-bottom:after,
+    {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .site-map-menu a.nolink {
+        color: #595959;
+    }
+    .menu--main-menu--new li.menu-depth-1.is-expanded li a.menu__link {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nist-footer__inner,
+    .region-bottom,
+    {
+        padding-right: 16px;
+        padding-right: 1rem;
+        padding-left: 16px;
+        padding-left: 1rem;
+    }
+    .full-header .menu--main-menu--new li.menu-depth-2 a.menu__link {
+        padding: 0px 0px 0px 11.2px;
+        padding: 0rem 0rem 0rem 0.7rem;
+    }
+}
+
+@media screen {
+    .with-wireframes #navigation,
+    .with-wireframes #nist-footer,
+    .with-wireframes .region-bottom {
+        outline: 1px solid #ccc;
+    }
+}
+
+@media screen {
+    #nist-footer {
+        background: #333333;
+        color: white;
+        padding: 96px 0px 96px 0px;
+        padding: 6rem 0rem 6rem 0rem;
+        padding-top: 40px;
+        padding-top: 2.5rem;
+        padding-bottom: 40px;
+        padding-bottom: 2.5rem;
+        position: relative;
+    }
+    #nist-footer a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    #nist-footer {
+        background: #333333;
+        padding-top: 20px;
+        padding-top: 1.25rem;
+    }
+}
+
+@media screen {
+    #nist-footer .nist-footer__logo img {
+        width: 286px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+    }
+    #nist-footer .nist-footer__contact {
+        font-size: 15px;
+        line-height: 17px;
+        margin: 30px 0;
+    }
+}
+
+@media screen {
+    .menu--nist-footer-main-menu {
+        clear: both;
+        border-top: 1px solid #595959;
+        border-bottom: 1px solid #595959;
+        padding-bottom: 40px;
+        padding-bottom: 2.5rem;
+    }
+    .menu--nist-footer-main-menu:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .menu--nist-footer-main-menu {
+        border-bottom: 1px solid #595959;
+        border-bottom-width: 1px;
+        border-bottom-width: 0.0625rem;
+        border-bottom-style: solid;
+        padding-bottom: 19px;
+        padding-bottom: 1.1875rem;
+        border-color: #595959;
+        margin-bottom: 40px;
+        margin-bottom: 2.5rem;
+    }
+}
+
+@media screen {
+    .menu--nist-footer-main-menu ul.menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .menu--nist-footer-main-menu ul.menu li {
+        padding: 0;
+        margin-bottom: 0;
+        vertical-align: top;
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 20px;
+        line-height: 1.25rem;
+    }
+    .menu--nist-footer-main-menu ul.menu li:before {
+        content: none;
+    }
+}
+
+@media screen and (min-width: 680px) and (max-width: 1199px) {
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-33106 {
+        -sgs-span-settings: ("span": 8, "location": 1, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 65.95745%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 2.12766%;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-33106:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-33106 div.last.column {
+        padding-left: 6px;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-3511 {
+        -sgs-span-settings: ("span": 4, "location": 9, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 31.91489%;
+        clear: right;
+        float: right;
+        margin-right: 0;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-63966 {
+        -sgs-span-settings: ("span": 4, "location": 9, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 31.91489%;
+        clear: right;
+        float: right;
+        margin-right: 0;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-2174 {
+        -sgs-span-settings: ("span": 4, "location": 1, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 31.91489%;
+        clear: right;
+        float: left;
+        margin-left: 0;
+        margin-right: 2.12766%;
+        clear: left;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-6121 {
+        -sgs-span-settings: ("span": 4, "location": 5, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 31.91489%;
+        clear: right;
+        float: left;
+        margin-right: 2.12766%;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-2172 {
+        -sgs-span-settings: ("span": 4, "location": 9, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 31.91489%;
+        clear: right;
+        float: right;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-33106 {
+        -sgs-span-settings: ("span": 4, "location": 1, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 31.91489%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 0;
+        clear: none;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-33106:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-33106 div.last.column {
+        padding-left: 6px;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-3511 {
+        -sgs-span-settings: ("span": 2, "location": 5, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 14.89362%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 34.04255%;
+        clear: none;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-63966 {
+        -sgs-span-settings: ("span": 2, "location": 5, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 14.89362%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 34.04255%;
+        clear: none;
+        margin-top: 40px;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-2174 {
+        -sgs-span-settings: ("span": 2, "location": 7, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 14.89362%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 51.06383%;
+        clear: none;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-6121 {
+        -sgs-span-settings: ("span": 2, "location": 9, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 14.89362%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 68.08511%;
+        clear: none;
+    }
+    .menu--nist-footer-main-menu ul.menu li.menu-mlid-2172 {
+        -sgs-span-settings: ("span": 2, "location": 11, "grid": 12, "gutter": 0.33333, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": false, "gutter property": "margin", "options": ((null: null)));
+        width: 14.89362%;
+        float: right;
+        margin-left: 0;
+        margin-right: 0;
+        clear: none;
+    }
+}
+
+@media screen {
+    .menu--nist-footer-main-menu ul.menu li a {
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        margin-bottom: 4.8px;
+        margin-bottom: 0.3rem;
+        text-transform: uppercase;
+    }
+    .menu--nist-footer-main-menu ul.menu li ul.menu li {
+        width: 100%;
+        margin-right: 0;
+        float: none;
+    }
+    .menu--nist-footer-main-menu ul.menu li ul.menu li a {
+        font-weight: normal;
+        display: block;
+        font-size: 16px;
+        font-size: 1rem;
+        text-transform: none;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .menu--nist-footer-main-menu ul.menu li ul.menu li {
+        margin-bottom: 0;
+    }
+}
+
+@media screen {
+    .menu--nist-footer-main-menu .menu-depth-1>a {
+        margin-top: 20px;
+        margin-top: 1.25rem;
+    }
+    .menu--nist-footer-menu {
+        clear: both;
+        margin-bottom: 9.6px;
+        margin-bottom: 0.6rem;
+    }
+    .menu--nist-footer-menu.first {
+        padding-top: 20.8px;
+        padding-top: 1.3rem;
+    }
+    .menu--nist-footer-menu ul.menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    .menu--nist-footer-menu ul.menu li {
+        display: inline-block;
+        font-size: 14.4px;
+        font-size: 0.9rem;
+        padding: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    .menu--nist-footer-menu ul.menu li:before {
+        content: '|';
+        margin-left: 1.6px;
+        margin-left: 0.1rem;
+        display: inherit;
+        position: static;
+        font: inherit;
+        line-height: inherit;
+        color: inherit;
+    }
+    .menu--nist-footer-menu ul.menu li.first a {
+        margin-left: 0;
+    }
+    .menu--nist-footer-menu ul.menu li.first:before {
+        content: none;
+    }
+    .menu--nist-footer-menu ul.menu li a {
+        font-weight: normal;
+        margin-left: 6.4px;
+        margin-left: 0.4rem;
+        white-space: nowrap;
+    }
+}
+
+@media print {
+    #header,
+    #nist-footer,
+    .social-links {
+        display: none !important;
+    }
+}
+
+.fa-leaf:before {
+    content: "\f06c";
+}
