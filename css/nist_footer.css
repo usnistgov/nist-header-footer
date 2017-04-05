@@ -114,24 +114,6 @@
 }
 
 @media screen {
-    .view--our-people.view--display-id-panel_pane_2 .view-header .item-list li,
-    .view--our-people .view-nist-footer .item-list li {
-        display: inline;
-        padding: 0px 35.2px 0px 0px;
-        padding: 0rem 2.2rem 0rem 0rem;
-        list-style-type: none;
-        background-image: none;
-        margin-bottom: 24px;
-        margin-bottom: 1.5rem;
-        margin-left: 0;
-    }
-    .view--our-people.view--display-id-panel_pane_2 .view-header .item-list li:before,
-    .view--our-people .view--nist-footer .item-list li:before {
-        content: none;
-    }
-}
-
-@media screen {
     .menu--nist-footer-main-menu {
         clear: both;
         border-top: 1px solid #595959;
@@ -380,7 +362,6 @@
 @media print {
     #header,
     #nist-footer,
-    a.nist-breadcrumb__link,
     .social-links {
         display: none !important;
     }
