@@ -1,4 +1,4 @@
-# nist-header
+# nist-header-footer
 Static html version of the nist.gov header bar
 
 ## Requirements
