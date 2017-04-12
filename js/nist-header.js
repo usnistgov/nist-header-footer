@@ -37,7 +37,7 @@ function closeMegamenu() {
 $(document).ready(function(){
 
   $("body").prepend('<div id="nistheadergoeshere"></div>');
-  $("#nistheadergoeshere").load("https://pages.nist.gov/nist-header/bodyboilerplate.html");
+  $("#nistheadergoeshere").load("https://pages.nist.gov/nist-header-footer/bodyboilerplate.html");
 
   expandCollapse($('li.is-active-trail > a .expander'));
 
