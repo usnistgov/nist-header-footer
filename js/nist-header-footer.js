@@ -75,7 +75,7 @@ $(document).ready(function(){
       //Mobile Menu Toggle on focus
       $menu.focus(function(){
         $('body').addClass('focus-mobile-menu');
-        $('.nist-header__nav-inner').slideDown(300);
+        //$('.nist-header__nav-inner').slideDown(300);
       });
 
       $('.nist-header__nav-inner .nist-menu').mouseleave(toggleMenu);
