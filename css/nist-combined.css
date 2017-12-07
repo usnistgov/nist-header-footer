@@ -2062,7 +2062,7 @@ html {
 .nist-header {
   background: white;
   position: relative;
-  z-index: 200;
+  z-index: 300;
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   box-sizing: border-box;
 }
