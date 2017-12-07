@@ -40,6 +40,8 @@ $(document).ready(function(){
   $("#nistheadergoeshere").load(
     "https://pages.nist.gov/nist-header-footer/boilerplate-header.html",
     function() {
+      var $menu = $('.nist-header__nav-toggle');
+
       expandCollapse($('li.is-active-trail > a .expander'));
 
       $('.expander').click(function(e){
@@ -56,9 +58,7 @@ $(document).ready(function(){
         $('.nist-header__nav-inner nist-menu__item--depth-1').removeClass('is-focused');
       });
 
-      //Mobile Menu Toggle on click
-      $('.nist-header__nav-toggle').click(function(){
-
+      function toggleMenu() {
         if($('body').hasClass('has-mobile-menu')){
           $('.nist-header__nav-inner').slideUp(300,function(){
             $('body').removeClass('has-mobile-menu');
@@ -67,14 +67,18 @@ $(document).ready(function(){
           $('body').addClass('has-mobile-menu');
           $('.nist-header__nav-inner').slideDown(300);
         }
+      }
 
-      });
+      //Mobile Menu Toggle on click
+      $menu.click(toggleMenu);
 
       //Mobile Menu Toggle on focus
-      $('.nist-header__nav-toggle').focus(function(){
+      $menu.focus(function(){
         $('body').addClass('focus-mobile-menu');
         $('.nist-header__nav-inner').slideDown(300);
       });
+
+      $menu.blur(toggleMenu);
 
       // Mobile Menu Toggle on focus
       $('#main').focusin(function(){
@@ -85,17 +89,18 @@ $(document).ready(function(){
         });
       });
 
-			//Close on Escape
-			$(document).keyup(function(e) {
-				var openExpander = $('.is-open .expander');
-				if (e.keyCode == 27) {
-					if (openExpander.length) {
-						$(".is-open .expander").trigger("click");
-					} else if ($('.nist-header__nav-inner:visible').length) {
-						$(".nist-header__nav-toggle").trigger("click");
-					}
-				}
-			});
+      //Close on Escape
+      $(document).keyup(function(e) {
+        var openExpander = $('.is-open .expander');
+        if (e.keyCode == 27) {
+          if (openExpander.length) {
+            $(".is-open .expander").trigger("click");
+          } else if ($('.nist-header__nav-inner:visible').length) {
+            //$(".nist-header__nav-toggle").trigger("click");
+            toggleMenu();
+          }
+        }
+      });
     }
   );
   $("body").append('<div id="nistfootergoeshere"></div>');
