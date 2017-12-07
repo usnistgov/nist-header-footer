@@ -75,18 +75,15 @@ $(document).ready(function(){
       //Mobile Menu Toggle on focus
       $menu.focus(function(){
         $('body').addClass('focus-mobile-menu');
-        //$('.nist-header__nav-inner').slideDown(300);
+      });
+      $menu.blur(function(){
+        $('body').removeClass('focus-mobile-menu');
       });
 
-      $('.nist-header__nav-inner .nist-menu').mouseleave(toggleMenu);
-
-      // Mobile Menu Toggle on focus
-      $('#main').focusin(function(){
-        $('.focus-mobile-menu .nist-header__nav-inner').slideUp(300,function(){
-          $('body').removeClass('focus-mobile-menu');
-          $('body').removeClass('has-mobile-menu');
-          //closeMegamenu();
-        });
+      // Toggle to close when mouse leaves menu
+      $('.nist-header__nav-inner .nist-menu').mouseleave(function () {
+        toggleMenu();
+        $menu.blur();
       });
 
       //Close on Escape
