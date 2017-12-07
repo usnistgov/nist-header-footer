@@ -16,7 +16,7 @@ function expandCollapse(expander) {
     expander.toggleClass("fa-minus fa-plus");
   }else{
     $('.nist-menu__submenu').slideUp();
-    $('.nist-header__nav-inner nist-menu__item--depth-1').removeClass("is-open");
+    $('.nist-header__nav-inner .nist-menu__item--depth-1').removeClass("is-open");
     $('.nist-header__nav-inner .expander').removeClass("fa-minus").addClass("fa-plus");
 
     /* collapse all the other submenus */
@@ -81,44 +81,24 @@ $(document).ready(function(){
         $('.focus-mobile-menu .nist-header__nav-inner').slideUp(300,function(){
           $('body').removeClass('focus-mobile-menu');
           $('body').removeClass('has-mobile-menu');
-          closeMegamenu();
+          //closeMegamenu();
         });
       });
+
+			//Close on Escape
+			$(document).keyup(function(e) {
+				var openExpander = $('.is-open .expander');
+				if (e.keyCode == 27) {
+					if (openExpander.length) {
+						$(".is-open .expander").trigger("click");
+					} else if ($('.nist-header__nav-inner:visible').length) {
+						$(".nist-header__nav-toggle").trigger("click");
+					}
+				}
+			});
     }
   );
   $("body").append('<div id="nistfootergoeshere"></div>');
   $("#nistfootergoeshere").load("https://pages.nist.gov/nist-header-footer/boilerplate-footer.html");
 
-});
-
-
-$(window).load(function(){
-
-  //Close on Click
-  $('.nist-menu__submenu').on('click', '.nist-menu__close', (function(e){
-    e.preventDefault();
-    closeMegamenu();
-  }));
-
-});
-
-//Close on Escape
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    closeMegamenu();
-  }
-});
-
-//Close on return when close button is in focus
-$(document).keyup(function(e) {
-  if (e.keyCode == 13 && $('.nist-menu__close').is(':focus')) {
-    closeMegamenu();
-  }
-});
-
-$(document).keyup(function(e) {
-  /* Enter key */
-  if (e.keyCode == 13 && $('.expander').is(':focus')) {
-    expandCollapse($('.expander:focus'));
-  };
 });
