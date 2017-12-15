@@ -80,12 +80,6 @@ $(document).ready(function(){
         $('body').removeClass('focus-mobile-menu');
       });
 
-      // Toggle to close when mouse leaves menu
-      $('.nist-header__nav-inner .nist-menu').mouseleave(function () {
-        toggleMenu();
-        $menu.blur();
-      });
-
       //Close on Escape
       $(document).keyup(function(e) {
         var openExpander = $('.is-open .expander');
