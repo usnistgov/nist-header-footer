@@ -10,22 +10,30 @@
 </head>
 <body>
   <div id="main" class="nist-main">
-    <h1>NIST CSS-less Header Template</h1>
+    <h1>NIST Header and Footer Template</h1>
     <p>
-      This repo can be used as a source for the NIST headers (and soon: footers and exit scripts) that are required(*) for use on public-facing sites.  It is recommended that you DO NOT copy these files into your repo, but rather link to them in-place so that you will automatically receive any changes or updates.
+      This repo can be used as a source for the NIST headers and footers that are required for use on public-facing sites.  It is recommended that you DO NOT copy these files into your repo, but rather link to them in-place so that you will automatically receive any changes or updates.
     </p>
-    <p>
-      An example of the NIST header bar is <a href="nist_header_bar.html">here</a>.
-    </p>
-    <h3>NOTE: this process is still being developed (improved, simplified).  Check back often for updates until we get this capability fully implemented.</h3>
     <p>
       To use this repo you do NOT have to copy any files; just insert the following into your pages' HEAD section:
     </p>
-    <pre style="white-space: pre-wrap; background-color: #eeeeff;"><code>
-&lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css"&gt;
-&lt;script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
-&lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
+    <pre style="white-space: pre-wrap; background-color: #eee;"><code>
+      &lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css"&gt;
+      &lt;script src="https://pages.nist.gov/nist-header-footer/js/jquery-1.9.0.min.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
+      &lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
     </code></pre>
+
+    <h2>Requirements</h2>
+    <p>Compatible with jQuery 1.7+ (1.9 is included)</p>
+
+    <h2>Tips</h2>
+    <p>
+      If you would like the footer to be pushed to the bottom of the browser window on short pages, add the <strong>nist-footer-bottom</strong> class to the top level html element.
+    </p>
+    <pre style="white-space: pre-wrap; background-color: #eee;"><code>
+      &lt;html class="nist-footer-bottom"&gt;
+    </code></pre>
+
   </div>
 </body>
 </html>
