@@ -33,6 +33,11 @@
   width: 90px;
 }
 
+/* For Bootstrap Users - Updated the vertical align property since it interfered with NIST SVG icon. */
+svg {
+  vertical-align: inherit;
+}
+
 /* Limit main content area width */
 .nist-main {
   margin-left: auto;
