@@ -17,6 +17,11 @@
   height: 35px;
 }
 
+/* For Bootstrap Users - Updated the vertical align property since it interfered with NIST SVG icon. */
+.nist-header__logo-link svg {
+  vertical-align: inherit;
+}
+
 .nist-header__logo-icon {
   fill: #fff;
   display: inline-block;
@@ -31,11 +36,6 @@
   display: inline-block;
   height: 24px;
   width: 90px;
-}
-
-/* For Bootstrap Users - Updated the vertical align property since it interfered with NIST SVG icon. */
-svg {
-  vertical-align: inherit;
 }
 
 /* Limit main content area width */
