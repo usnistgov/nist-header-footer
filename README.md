@@ -16,7 +16,7 @@ To use this repo you do NOT have to copy any files; just insert the following in
 * Compatible with jQuery 1.7+ (1.9 is included)
 
 ## Tips
-If you would like the footer to be pushed to the bottom of the browser window on short pages, add the `nist-footer-bottom` class to the top level html element.
+If you would like the footer to be pushed to the bottom of the browser window on short pages, add the `nist-footer-bottom` class to the top level html element. Also make sure to add ID selector `#main` to content body wrapper.
 ```
 <html class="nist-footer-bottom">
 ```
