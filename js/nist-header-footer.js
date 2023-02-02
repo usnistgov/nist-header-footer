@@ -4,22 +4,38 @@
  *
  */
 
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
 
-  $("body").prepend('<div id="nistheadergoeshere"></div>');
-  $.ajax({
-    url: "https://pages.nist.gov/nist-header-footer/boilerplate-header.html",
-    cache: false,
-    dataType: "html",
-    success: function (data) { $('#nistheadergoeshere').append(data); },
-  });
+  const cache = "?_=" + new Date().valueOf();
 
-  $("body").append('<div id="nistfootergoeshere"></div>');
-  $.ajax({
-    url: "https://pages.nist.gov/nist-header-footer/boilerplate-footer.html",
-    cache: false,
-    dataType: "html",
-    success: function (data) { $('#nistfootergoeshere').append(data); },
-  });
+  var headerDiv = document.createElement("div");
+  headerDiv.id = 'nistheadergoeshere';
+  document.body.prepend(headerDiv);
+  var headerRequest = new XMLHttpRequest();
+  headerRequest.onreadystatechange = function() {
+    if (this.readyState == XMLHttpRequest.DONE &&
+        this.status == 200) {
+      document.getElementById('nistheadergoeshere').innerHTML =
+          this.responseText;
+    }
+  };
+  headerRequest.open('GET', 'https://pages.nist.gov/nist-header-footer/' +
+      'boilerplate-header.html' + cache);
+  headerRequest.send();
+
+  var footerDiv = document.createElement("div");
+  footerDiv.id = 'nistfootergoeshere';
+  document.body.append(footerDiv);
+  var footerRequest = new XMLHttpRequest();
+  footerRequest.onreadystatechange = function() {
+    if (this.readyState == XMLHttpRequest.DONE &&
+        this.status == 200) {
+      document.getElementById('nistfootergoeshere').innerHTML =
+          this.responseText;
+    }
+  };
+  footerRequest.open('GET', 'https://pages.nist.gov/nist-header-footer/' +
+      'boilerplate-footer.html' + cache);
+  footerRequest.send();
 
 });
