@@ -13,7 +13,7 @@ To use this repo you do NOT have to copy any files; just insert the following in
 ```
 
 ## Requirements
-* Compatible with JQuery 3.0+. JQuery 1.9 is included in repo for legacy purposes but should not be used. Users are advised to switch to using latest version of jQuery.
+* Compatible with JQuery 3.0+. JQuery 1.9 was removed due to a critical security vulnerability. Users are advised to switch to using latest version of jQuery.
 
 ## Tips
 If you would like the footer to be pushed to the bottom of the browser window on short pages, add the `nist-footer-bottom` class to the top level html element. Also make sure to add ID selector `#main` to content body wrapper.
