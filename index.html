@@ -5,26 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>National Institute of Standards and Technology</title>
   <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
-  <script src="https://code.jquery.com/jquery-3.6.2.min.js" type="text/javascript" defer="defer"></script>
   <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
 </head>
 <body>
   <div id="main" class="nist-main">
     <h1>NIST Header and Footer Template</h1>
-    <p>
-    This repo can be used as a source for the NIST headers and footers that are required for use on public-facing sites. It is recommended that you DO NOT copy these files into your repo, but rather link to them in-place so that you will automatically receive any changes or updates. <b>EXCEPTION:</b> If you expect high traffic volume or need it to be highly available, and it does not reside on pages.nist.gov, you <i>should</i> copy these files to your site and use the local copy. <b>pages.nist.gov is not highly available.</b>
-    </p>
-    <p>
-      Otherwise, to use this repo you do NOT have to copy any files; just insert the following into your pages' HEAD section:
-    </p>
+    <p>This repo can be used as a source for the NIST headers and footers that are required for use on public-facing sites. It is recommended that you DO NOT copy these files into your repo, but rather link to them in-place so that you will automatically receive any changes or updates. <b>EXCEPTION:</b> If you expect high traffic volume or need it to be highly available, and it does not reside on pages.nist.gov, you <i>should</i> copy these files to your site and use the local copy. <b>pages.nist.gov is not highly available.</b></p>
+    <p>Otherwise, to use this repo you do NOT have to copy any files; just insert the following into your pages' HEAD section:</p>
+
     <pre style="white-space: pre-wrap; background-color: #eee;"><code>
       &lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css"&gt;
-      &lt;script src="https://code.jquery.com/jquery-3.6.2.min.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
       &lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
     </code></pre>
 
     <h2>Requirements</h2>
-    <p>Compatible with JQuery 3.0+. JQuery 1.9 is included in repo for legacy purposes but should not be used. Users are advised to switch to using latest version of jQuery.</p>
+    <p>Nothing other than the javascript file <code>nist-header-footer.js</code>. This version does away with the jQuery dependency which is nice. Shout out to Greg Fiumara for doing that work on his own initiative.</p>
 
     <h2>Tips</h2>
     <p>
