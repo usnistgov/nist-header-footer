@@ -8,12 +8,8 @@ To use this repo you do NOT have to copy any files; just insert the following in
 
 ```
   <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
-  <script src="https://code.jquery.com/jquery-3.6.2.min.js" type="text/javascript" defer="defer"></script>
   <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
 ```
-
-## Requirements
-* Compatible with JQuery 3.0+. JQuery 1.9 was removed due to a critical security vulnerability. Users are advised to switch to using latest version of jQuery.
 
 ## Tips
 If you would like the footer to be pushed to the bottom of the browser window on short pages, add the `nist-footer-bottom` class to the top level html element. Also make sure to add ID selector `#main` to content body wrapper.
