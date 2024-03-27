@@ -56,12 +56,14 @@ body {
 /* Footer styles */
 
 .nist-footer {
-  background: #333333;
+  background: #2e2e2e;
   position: relative;
   z-index: 200;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   box-sizing: border-box;
+  color: white;
+  padding: 40px 0px;
 }
 
 .nist-footer__inner {
@@ -75,13 +77,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-.nist-footer {
-  background: #333333;
-  color: white;
-  padding: 40px 0px;
-  position: relative;
 }
 
 .nist-footer a {
