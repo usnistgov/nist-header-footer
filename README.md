@@ -14,8 +14,8 @@ Otherwise, to use this repo you do NOT have to copy any files; just insert the f
 Should you want to increase security, or prevent any future javascript changes from affecting you, you can use the versioned instance of the js file as shown below.
 
 ```
-      <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
-      <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer-v-2.0.js" type="text/javascript" defer="defer"></script>
+  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
+  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer-v-2.0.js" type="text/javascript" defer="defer"></script>
 ```
 
 ## Requirements
