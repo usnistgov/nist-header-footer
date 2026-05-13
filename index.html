@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>National Institute of Standards and Technology</title>
-  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
-  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
+  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css" crossorigin="anonymous">
+  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer" crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="main" class="nist-main">
@@ -14,19 +14,22 @@
     <p>Otherwise, to use this repo you do NOT have to copy any files; just insert the following into your pages' HEAD section:</p>
 
     <pre style="white-space: pre-wrap; background-color: #eee;"><code>
-      &lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css"&gt;
-      &lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
+      &lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css" crossorigin="anonymous"&gt;
+      &lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer" crossorigin="anonymous"&gt;&lt;/script&gt;
     </code></pre>
 
     <p>Should you want to increase security, or prevent any future javascript changes from affecting you, you can use the versioned instance of the js file as shown below.</p>
     <pre style="white-space: pre-wrap; background-color: #eee;"><code>
-      &lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css"&gt;
-      &lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer-v-2.0.js" type="text/javascript" defer="defer"&gt;&lt;/script&gt;
+      &lt;link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css" crossorigin="anonymous"&gt;
+      &lt;script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer-v-2.0.js" type="text/javascript" defer="defer" crossorigin="anonymous"&gt;&lt;/script&gt;
     </code></pre>
 
 
     <h2>Requirements</h2>
     <p>Nothing other than the javascript file <code>nist-header-footer.js</code>. This version does away with the jQuery dependency which is nice. Shout out to Greg Fiumara for doing that work on his own initiative.</p>
+
+    <h2>Cross-origin isolation</h2>
+    <p>Sites that use Subresource Integrity (SRI) or cross-origin isolation headers such as <code>Cross-Origin-Embedder-Policy: require-corp</code> should load the hosted stylesheet and script with <code>crossorigin="anonymous"</code>, as shown in the examples above. This lets the browser request the hosted assets in CORS mode.</p>
 
     <h2>Tips</h2>
     <p>

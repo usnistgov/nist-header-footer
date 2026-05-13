@@ -7,19 +7,22 @@ This repo can be used as a source for the NIST headers and footers that are requ
 Otherwise, to use this repo you do NOT have to copy any files; just insert the following into your pages' HEAD section:
 
 ```
-  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
-  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer"></script>
+  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css" crossorigin="anonymous">
+  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer.js" type="text/javascript" defer="defer" crossorigin="anonymous"></script>
 ```
 
 Should you want to increase security, or prevent any future javascript changes from affecting you, you can use the versioned instance of the js file as shown below.
 
 ```
-  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css">
-  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer-v-2.0.js" type="text/javascript" defer="defer"></script>
+  <link rel="stylesheet" href="https://pages.nist.gov/nist-header-footer/css/nist-combined.css" crossorigin="anonymous">
+  <script src="https://pages.nist.gov/nist-header-footer/js/nist-header-footer-v-2.0.js" type="text/javascript" defer="defer" crossorigin="anonymous"></script>
 ```
 
 ## Requirements
 Nothing other than the javascript file nist-header-footer.js. This version does away with the jQuery dependency which is nice. Shout out to Greg Fiumara for doing that work on his own initiative.
+
+## Cross-origin isolation
+Sites that use Subresource Integrity (SRI) or cross-origin isolation headers such as `Cross-Origin-Embedder-Policy: require-corp` should load the hosted stylesheet and script with `crossorigin="anonymous"`, as shown in the examples above. This lets the browser request the hosted assets in CORS mode.
 
 ## Tips
 If you would like the footer to be pushed to the bottom of the browser window on short pages, add the `nist-footer-bottom` class to the top level html element. Also make sure to add ID selector `#main` to content body wrapper.
